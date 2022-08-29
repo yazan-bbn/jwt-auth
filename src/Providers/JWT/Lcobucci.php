@@ -21,7 +21,7 @@ use Lcobucci\JWT\Signer\Ecdsa;
 use Lcobucci\JWT\Signer\Key;
 use Lcobucci\JWT\Signer\Key\InMemory;
 use Lcobucci\JWT\Signer\Rsa;
-use Lcobucci\JWT\Token\Builder;
+use Lcobucci\JWT\Builder;
 use Lcobucci\JWT\Token\RegisteredClaims;
 use Lcobucci\JWT\Validation\Constraint\SignedWith;
 use Tymon\JWTAuth\Contracts\Providers\JWT;
@@ -133,7 +133,7 @@ class Lcobucci extends Provider implements JWT
      * Create an instance of the builder with all of the claims applied.
      *
      * @param  array  $payload
-     * @return \Lcobucci\JWT\Token\Builder
+     * @return \Lcobucci\JWT\Builder
      */
     protected function getBuilderFromClaims(array $payload): Builder
     {
